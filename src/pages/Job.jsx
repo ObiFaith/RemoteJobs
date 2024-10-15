@@ -16,7 +16,7 @@ const Job = () => {
 			<div className="relative flex justify-end -top-[200px]">
 				<BackBtn />
 			</div>
-			<div className="flex items-center shadow-md relative -top-10 bg-white">
+			<div className="flex items-center shadow-md relative -top-40 bg-white">
 				<div className="bg-white">
 					<img
 						className="object-cover"
@@ -40,7 +40,7 @@ const Job = () => {
 				</div>
 			</div>
 			<div
-				className="bg-white p-10 max-lg:p-6 shadow-md text-black/80"
+				className="bg-white p-10 relative -top-24 max-lg:p-6 shadow-md text-black/80"
 				dangerouslySetInnerHTML={{
 					__html: description,
 				}}

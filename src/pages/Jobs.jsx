@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, Loader, Search } from '..';
+import { Card, Loader } from '..';
 import { JobState } from '../data/jobContext';
 
 const Jobs = () => {
