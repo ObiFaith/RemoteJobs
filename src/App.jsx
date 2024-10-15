@@ -1,4 +1,4 @@
-import { Job, Jobs, Layout } from '.';
+import { Job, Jobs, Layout, NotFound } from '.';
 import { ApiHandler } from './data/apiHandler';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { JobState } from './data/jobContext';
@@ -13,7 +13,11 @@ export default function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Layout />}>
+				<Route
+					path="/"
+					element={<Layout />}
+					errorElement={<NotFound />}
+				>
 					<Route index element={<Jobs />} />
 					<Route path="/:id" element={<Job />} />
 				</Route>
