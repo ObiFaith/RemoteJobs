@@ -1,3 +1,23 @@
+import { Job, Jobs, Layout } from '.';
+import { ApiHandler } from './data/apiHandler';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { JobState } from './data/jobContext';
+
 export default function App() {
-	return <h1 className="text-3xl text-red-600 font-bold underline">Hello world!</h1>;
+	const { getJobs } = ApiHandler();
+	const {
+		state: { jobs },
+	} = JobState();
+	if (jobs.length === 0) getJobs();
+
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Jobs />} />
+					<Route path="/:id" element={<Job />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
 }
