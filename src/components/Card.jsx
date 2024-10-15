@@ -13,7 +13,7 @@ const Card = ({
 }) => {
 	return (
 		<div className="py-6 px-4 relative bg-white max-w-96 rounded-lg shadow-md">
-			<div className="absolute rounded-lg -top-5">
+			<div className="absolute shadow-sm rounded-lg -top-5">
 				<img
 					className="rounded-lg object-cover"
 					width={50}
