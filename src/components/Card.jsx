@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
-import { jobTypeFormat } from '../data/constant';
+import { goToTop, jobTypeFormat } from '../data/constant';
 
 const Card = ({
 	id,
@@ -42,6 +42,7 @@ const Card = ({
 					{title && (
 						<Link
 							to={`/${id}`}
+							onClick={goToTop}
 							className="text-black/80 hover:underline underline-offset-2 hover:text-purple-600 font-bold text-base sm:text-base md:text-lg lg:text-xl"
 						>
 							{title.slice(0, 26) +

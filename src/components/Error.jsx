@@ -1,8 +1,7 @@
-// eslint-disable-next-line react/prop-types
-const Error = ({ error }) => {
+const Error = () => {
 	return (
 		<h2 className="text-3xl text-red md:text-4xl lg:text-5xl justify-center grid items-center h-[70svh]">
-			{error}
+			Error Fetching Job(s)
 		</h2>
 	);
 };

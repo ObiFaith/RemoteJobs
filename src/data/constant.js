@@ -12,3 +12,5 @@ export const jobTypeFormat = job_type => {
 		);
 	return jobType;
 };
+
+export const goToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });

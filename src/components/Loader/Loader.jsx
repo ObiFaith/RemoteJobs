@@ -5,7 +5,7 @@ import { JobState } from '../../data/jobContext';
 const Loader = () => {
 	const { errorMessage } = JobState();
 	return errorMessage ? (
-		<Error error={errorMessage} />
+		<Error />
 	) : (
 		<div className="justify-center grid items-center h-[70svh]">
 			<div className="loading"></div>
