@@ -11,7 +11,7 @@ const Jobs = () => {
 	const jobsPerPage = jobs.slice(0, pageLimit);
 	return jobs.length > 0 ? (
 		<section className="container py-32 relative">
-			<Search />
+			{/* <Search /> */}
 			<div className="grid justify-between max-sm:justify-center sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
 				{jobsPerPage.map(job => (
 					<Card key={job.id} {...job} />
